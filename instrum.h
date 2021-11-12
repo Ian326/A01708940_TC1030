@@ -81,6 +81,39 @@ public:
 
 };
 
+class Diary_Racer{
+
+private:
+  std::string feeling;
+  float hours_slept;
+  std::string to_do;
+  std::string tell_sth;
+
+public:
+  Diary_Racer();
+  Diary_Racer(std::string feeling1, float hours_slept1, std::string to_do1, std::string tell_sth1):feeling(feeling1), hours_slept(hours_slept1), to_do(to_do1), tell_sth(tell_sth1){};
+
+   std::string get_feeling(){
+     return feeling;
+   };
+   float get_hours_slept(){
+     return hours_slept;
+   };
+   std::string get_to_do(){
+     return to_do;
+   };
+   std::string get_tell_sth(){
+     return tell_sth;
+   };
+
+   void set_feeling(std::string);
+   void set_hours_slept(float);
+   void set_to_do(std::string);
+   void set_tell_sth(std::string);
+
+
+};
+
 void CarSports::set_color(std::string color1){
   color = color1;
 }
@@ -114,4 +147,17 @@ void RacerSports::set_height(float height1){
 }
 void RacerSports::set_weight(float weight1){
   weight = weight1;
+}
+
+void Diary_Racer::set_feeling(std::string feeling1){
+  feeling = feeling1;
+}
+void Diary_Racer::set_hours_slept(float hours_slept1){
+  hours_slept = hours_slept1;
+}
+void Diary_Racer::set_to_do(std::string to_do1){
+  to_do = to_do1;
+}
+void Diary_Racer::set_tell_sth(std::string tell_sth1){
+  tell_sth = tell_sth1;
 }
