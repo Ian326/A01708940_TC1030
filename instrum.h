@@ -1,8 +1,8 @@
 #include<string>
 
-class CarSports{
+class CarSports{ //Clase para el coche que maneja el usuario
 
-private:
+private: //Con todas las variables que requiere el coche
   std::string color;
   int model;
   float dim_x;
@@ -11,9 +11,10 @@ private:
   int cylinders;
 
 public:
-  CarSports();
+  CarSports();//Para inicializar los objetos de tipo carro
   CarSports(std::string color1, int model1, float dim_x1, float dim_y1, float dim_z1, int cylinders1):color(color1), model(model1), dim_x(dim_x1), dim_y(dim_y1), dim_z(dim_z1), cylinders(cylinders1){};
 
+  //Se inicializan los getters para el carro
    std::string get_color(){
      return color;
    };
@@ -32,7 +33,7 @@ public:
    float get_cylinders(){
      return cylinders;
    };
-
+   //Se declaran los setters para las variables del carro
    void set_color(std::string );
    void set_model(int);
    void set_cylinders(int);
@@ -41,19 +42,21 @@ public:
    void set_dim_z(float);
 };
 
-class RacerSports{
+class RacerSports{//Clase para el usuario con datos generales sobre él
 
-private:
+private:  //Con todas las variables que requiere el usuario
   std::string name;
   int age;
   std::string sox;
   float height;
   float weight;
   float imc;
+
 public:
-  RacerSports();
+  RacerSports();//Para inicializar los objetos de tipo usuario
   RacerSports(std::string name1, int age1, std::string sox1, float height1, float weight1):name(name1), age(age1), sox(sox1), height(height1), weight(weight1), imc(){};
 
+  //Se inicializan los getters para el usuario
    std::string get_name(){
      return name;
    };
@@ -73,6 +76,7 @@ public:
      return weight/(height*height);
    };
 
+   //Se declaran los setters para las variables del usuario
    void set_name(std::string );
    void set_age(int);
    void set_sox(std::string);
@@ -81,18 +85,19 @@ public:
 
 };
 
-class Diary_Racer{
+class Diary_Racer{//Para inicializar los objetos de tipo 'diario'
 
-private:
+private:  //Con todas las variables que requiere el 'diario'
   std::string feeling;
   float hours_slept;
   std::string to_do;
   std::string tell_sth;
 
 public:
-  Diary_Racer();
+  Diary_Racer();//Para inicializar los objetos de tipo 'diario'
   Diary_Racer(std::string feeling1, float hours_slept1, std::string to_do1, std::string tell_sth1):feeling(feeling1), hours_slept(hours_slept1), to_do(to_do1), tell_sth(tell_sth1){};
 
+    //Se inicializan los getters para el 'diario'
    std::string get_feeling(){
      return feeling;
    };
@@ -106,6 +111,7 @@ public:
      return tell_sth;
    };
 
+   //Se declaran los setters para las variables del 'diario'
    void set_feeling(std::string);
    void set_hours_slept(float);
    void set_to_do(std::string);
@@ -114,6 +120,7 @@ public:
 
 };
 
+//Se inicializan los setters para las clases carro, usuario y 'diario'
 void CarSports::set_color(std::string color1){
   color = color1;
 }
