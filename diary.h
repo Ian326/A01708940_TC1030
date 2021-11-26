@@ -6,20 +6,22 @@ Profesor: Benjamín Valdés
 Entrega: 26/Nov/2021
 Archivo: diary.h
 */
+
 #ifndef DIARY_H
 #include <string>
 using namespace std;
 
-class DiaryRacer{//Para inicializar los objetos de tipo 'diario'
+//Clase para crear un 'diario' del corredor
+class DiaryRacer{
 
-private:  //Con todas las variables que requiere el 'diario'
+private:  //Atributos de un objeto tipo diario
   string feeling;
   float hours_slept;
   string to_do;
   string comment;
 
-public:
-  //Para inicializar los objetos de tipo 'diario'
+public: //Constructor para el diario
+
   DiaryRacer(int null): feeling(""), hours_slept(0), to_do(""), comment(""){};
   DiaryRacer(): feeling(""), hours_slept(0), to_do(""), comment(""){};
   DiaryRacer(string feeling1, float hours_slept1, string to_do1, string comment1){

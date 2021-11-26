@@ -10,23 +10,24 @@ Archivo: carSports.h
 #ifndef CARSPORTS_H
 #include <string>
 
+//Clase para el coche que maneja el usuario
+class CarSports{
 
-class CarSports{ //Clase para el coche que maneja el usuario
-
-private: //Con todas las variables que requiere el coche
+private: //Atributos de un objeto tipo coche
   std::string color;
   std::string model;
   int cylinders;
 
-public:
+public: //Constructores para crear objetos tipo coche
   CarSports(int null): color("Plateado"), model("Toyota Supra"), cylinders(6){};
   CarSports(): color("Plateado"), model("Toyota Supra"), cylinders(6){};//Para inicializar los objetos de tipo carro
   CarSports(std::string color1, std::string model1, int cylinders1):color(color1), model(model1), cylinders(cylinders1){};
 
-  //Se inicializan los getters para el carro
+  //Se inicializan los getters para el coche
    std::string get_color(){
      return color;
    };
+
    std::string get_model() {
      return model;
   };
@@ -34,6 +35,7 @@ public:
    float get_cylinders(){
      return cylinders;
    };
+
    //Se declaran los setters para las variables del carro
    void set_color(std::string);
    void set_model(std::string);
@@ -44,9 +46,11 @@ public:
 void CarSports::set_color(std::string color1){
   color = color1;
 }
+
 void CarSports::set_model(std::string model1){
   model = model1;
 }
+
 void CarSports::set_cylinders(int cylinders1){
   cylinders = cylinders1;
 }

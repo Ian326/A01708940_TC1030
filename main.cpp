@@ -4,6 +4,7 @@ Matrícula: A01708940
 Materia: TC1033.2
 Profesor: Benjamín Valdés
 Entrega: 26/Nov/2021
+Archivo: main.cpp
 */
 
 #include <iostream>
@@ -12,19 +13,20 @@ Entrega: 26/Nov/2021
 using namespace std;
 
 int main() {
-  //Variables temporales para el usuario
+
+  //Atributos temporales del Usuario
   int id, age;
   string n, s;
   float h, w, hRun;
 
-  //crear un objeto tipo Usuario
+  //Crear un objeto tipo Usuario
   cout <<"---Bienvenido corredor, completa los siguientes datos para crear tu registro---\n";
   cout <<"\n Introduce tu ID, en caso de no contar con uno, introduce 0: ";
   cin >> id;
   cout <<"\n Introduce tu nombre: ";
   cin >> n;
   cout <<"\n Mucho gusto, "<< n << "\n";
-  cout <<"\n Introduce tu edad (en años): ";
+  cout <<"\n Introduce tu edad (en anios): ";
   cin >> age;
   cout <<"\n Introduce tu sexo: ";
   cin >> s;
@@ -38,18 +40,20 @@ int main() {
 //Determinar si el usuario es un corredor Principiante o Avanzado
 if (hRun < 100){
   RacerNew racer1 (id,n,age,s,h,w,hRun,0,0);
-  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n";
-  racer1.set_diary();
-  racer1.set_car();
-  racer1.select_train();
+  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n\n";
+
+  racer1.set_diary();       //Agregar un diario 'default' al corredor
+  racer1.set_car();         //Agregar un carro 'default' al corredor
+  racer1.select_train();    //Función exclusiva para corredores nuevos
 }
 
 else{
   RacerAdv racer1 (id,n,age,s,h,w,hRun,0,0);
-  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n";
-  racer1.set_diary();
-  racer1.set_car();
-  racer1.set_sponsor();
+  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n\n";
+
+  racer1.set_diary();       //Agregar un diario 'default' al corredor
+  racer1.set_car();         //Agregar un carro 'default' al corredor
+  racer1.set_sponsor();     //Función exclusiva para corredores avanzados
 
 }
 
