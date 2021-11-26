@@ -26,8 +26,17 @@ Al utilizar linux:
 
 Al utilizar windows:
       "a.exe"
+A día de hoy (26-Nov) el programa solo permite ingresar lso datos del usuario, mas no permite ingresar ningun tipo de entrada para crear su diario personalizado.
 
 ## Correcciones
 En la versión actual se han hecho los siguientes cambios:
-1 Se ha modficado el archivo de clases para cumplir con la estructura requerida. Con getters y métodos junto a su objeto correspondiente, para facilitar el entendimiento del programa.
-2 Además, se ha modificado este ReadMe, seccionandolo para una mejor compresión de lo que hace el programa
+
+1- La cabezera 'instrum.h' se ha dividido en algunas otras (una por cada clase del programa), lo que permite un mayor orden y accesibilidad a cada parte del programa
+
+2- El archivo 'main' se ha modificado para poder implementar el uso de agregación y herencia al programa (se puede observar para el tipo de conductor y las clases carro/diario respectivamente)
+
+3- Se ha actualizado el Diagrama de Clases UML, pues se había utilizado incorrectamente la simbología para representar el funcionamiento del prorgama, además, se adaptop para representar correctamente Herencia y agregación
+
+4- Se han puesto más comentarios y dado un mejor formato a todas las secciones del programa para facilitar su entendimiento y se ha limpiado un poco el código
+
+5- Se ha actualizado este ReadMe.
