@@ -26,7 +26,8 @@ Al utilizar linux:
 
 Al utilizar windows:
       "a.exe"
-A día de hoy (26-Nov) el programa solo permite ingresar lso datos del usuario, mas no permite ingresar ningun tipo de entrada para crear su diario personalizado.
+      
+A día de hoy (26-Nov) el programa solo permite ingresar los datos del usuario, mas no permite ingresar ningun tipo de entrada para crear su diario personalizado.
 
 ## Correcciones
 En la versión actual se han hecho los siguientes cambios:
