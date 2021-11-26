@@ -8,7 +8,7 @@ Entrega: 26/Nov/2021
 
 #include <iostream>
 #include <string>
-#include "instrum.h"
+#include "racer_Type.h"
 using namespace std;
 
 int main() {
@@ -16,6 +16,7 @@ int main() {
   int id, age;
   string n, s;
   float h, w, hRun;
+
   //crear un objeto tipo Usuario
   cout <<"---Bienvenido corredor, completa los siguientes datos para crear tu registro---\n";
   cout <<"\n Introduce tu ID, en caso de no contar con uno, introduce 0: ";
@@ -34,13 +35,23 @@ int main() {
   cout <<"\n Cuantas horas has corrido en la pista? (en horas) ";
   cin >> hRun;
 
-  RacerSports racer_1(id,n,age,s,h,w,hRun);
-  cout << "\n Gracias " << racer_1.get_name() << ", tu id es " << racer_1.get_id() <<"\n";
+//Determinar si el usuario es un corredor Principiante o Avanzado
+if (hRun < 100){
+  RacerNew racer1 (id,n,age,s,h,w,hRun,0,0);
+  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n";
+  racer1.set_diary();
+  racer1.set_car();
+  racer1.select_train();
+}
 
-  CarSports car_1;//crear un objeto tipo Carro
-  cout <<"El numero de Cilindros de tu auto es de: " <<car_1.get_color() <<"\n";
+else{
+  RacerAdv racer1 (id,n,age,s,h,w,hRun,0,0);
+  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n";
+  racer1.set_diary();
+  racer1.set_car();
+  racer1.set_sponsor();
 
-  //crear un objeto tipo Diario
-  Diary_Racer r1_d1("Cansado", 5.2, "Hoy terminaré mi adelanto de programación", "Parece que el adelanto de hoy es todo un exito");
-  std::cout << r1_d1.get_comment() <<"\n";
+}
+
+
 }
