@@ -80,6 +80,14 @@ class RacerSports{
      return hoursRun;
    };
 
+   DiaryRacer get_diary(){
+     return diario;
+   };
+
+   CarSports get_car(){
+     return carro;
+   };
+
   void set_diary(string feeling1, float hours_slept1, string to_do1, string comment1){
       diario = DiaryRacer(feeling1, hours_slept1, to_do1, comment1);}
 

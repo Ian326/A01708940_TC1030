@@ -27,10 +27,21 @@ public:
 
 //Función exlusiva de un corredor principiante
 void RacerNew::select_train(){
-  cout << "Elige el tipo de entrenamiento que llevas: \n";
-  cout << "Basico \t" << "Avanzado \n";
-  cin >> train;
-  cout <<"Gracias";
+  bool trainbool = true;
+  while (trainbool == true){
+    cout << "Elige el tipo de entrenamiento que llevas: \n";
+    cout << "Basico \t" << "Avanzado \n";
+    cin >> train;
+    if (train == "Basico" || train == "Avanzado" || train == "basico" || train == "avanzado"){
+      cout <<"Gracias \n";
+      trainbool = false;
+    }
+    else{
+      cout << " \n Opcion invalida. Intentalo de nuevo \n";
+    }
+
+  };
+
 };
 
 //Clase para crear un corredor 'avanzado'
@@ -47,11 +58,21 @@ public:
 
   //Función exlusiva de un corredor avanzado
     void RacerAdv::set_sponsor(){
+      bool sponsrbool = true;
+      while (sponsrbool == true){
       cout << "Elige a tu patrocinador para la proxima carrera: \n";
       cout << "Redbull \t" << "Heineken \t" << "Monster \n";
       cin >> sponsr;
-      cout <<"Gracias";
+      if (sponsr == "Redbull" || sponsr == "Heineken" || sponsr == "Monster"){
+        cout <<"Gracias \n";
+        sponsrbool = false;
+      }
+      else{
+        cout << " \n Opcion invalida. Intentalo de nuevo \n";
+      }
 
+
+                                }
 };
 
 
