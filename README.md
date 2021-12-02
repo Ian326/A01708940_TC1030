@@ -38,8 +38,6 @@ Además, el programa incluye dos clases para un el corredor, según la cantidad 
 ## Correcciones
 En la versión actual se han hecho los siguientes cambios:
 
-1- El archivo 'main' se ha modificado para poder implementar el uso de agregación y herencia al programa. Esto se puede observar para el tipo de conductor (pues uno podrá solamente elegir sus entrenamientos y el otro su patrocinador de carreras) y dentro de las clases carro/diario respectivamente (donde estos objetos se agregan al corredor dentro de sus atributos, para incluirlos en su perfil completo de carreras).
+1- Se ha arreglado el estilo de comentarios del programa
 
-2- Se han puesto más comentarios y dado un mejor formato a todas las secciones del programa para facilitar su entendimiento y se ha limpiado un poco el código
-
-3- Se ha actualizado este ReadMe.
+2- Se ha actualizado este ReadMe.
