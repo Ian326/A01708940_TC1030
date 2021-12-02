@@ -7,9 +7,17 @@ Entrega: 26/Nov/2021
 Archivo: main.cpp
 */
 
-#include <iostream>
-#include <string>
-#include "racer_Type.h"
+/**
+ * Descripcion este es mi entrega de proyecto para la clase de Pensamiento
+ * Computacional Orientado a Objetos. Es un programa que permite
+ * ingresar datos de un corredor de carreras e ingresar información
+ * a un diario que estará vinculado hacia si mismo.
+*/
+
+//Bibliotecas
+#include <iostream>     //Imprimir en pantalla
+#include <string>       //std::string
+#include "racer_Type.h" //Para identificar al usuario
 using namespace std;
 
 int main() {
@@ -67,7 +75,7 @@ if (hRun < 100){
 
 else{
   RacerAdv racer1 (id,n,age,s,h,w,hRun,0,0);
-  cout << "\n Gracias " << racer1.get_name() << ", tu id es " << racer1.get_id() <<"\n\n";
+  cout << "\n Gracias " << racer1.get_name() << ", tu id como corredor es " << racer1.get_id() <<"\n\n";
 
   racer1.set_diary(fl, hs, td, cm1);                    //Agregar un diario 'default' al corredor
   racer1.set_car();                                    //Agregar un carro 'default' al corredor

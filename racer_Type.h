@@ -6,6 +6,12 @@ Profesor: Benjamín Valdés
 Entrega: 26/Nov/2021
 */
 
+/*
+ * librería racer_Type, determina si el usuario ingresado
+ * es Principiante o Avanzado
+ *
+ */
+
 #ifndef RACER_TYPE_H
 #include <iostream>
 #include <string>
@@ -16,16 +22,34 @@ using namespace std;
 class RacerNew: public RacerSports{
 
 public:
+  //Variables exclusivas de esta clase
   std::string train;
 
-//El Constructor de esta clase manda a llamar al Constructor de 'instrum.h'
+  /**
+   * Constructor del usuario principiante donde recibe valores
+   * para llenar las variables de instancia
+   * @param int id: el id del usuario, string name: el nombre del usuario
+   *        int age: edad del usuario, string sox: sexo del Usuario
+   *        float height: altura del usuario, floath weight: peso del usuario
+   *        float hoursRun: tiempo en la pista, Diary Racer diary: diario del usuario
+   *        Car Sports: Auto que usará en la pista
+   * @return Objeto RacerNew
+   * El Constructor de esta clase manda a llamar al Constructor de 'instrum.h'
+  */
+
   RacerNew(int id, std::string name, int age, std::string sox, float height, float weigth, float hoursRun, DiaryRacer diary, CarSports car): RacerSports(id,name,age,sox,height,weight,hoursRun, diary, car){};
 
   void select_train();
 
                         };
 
-//Función exlusiva de un corredor principiante
+/**
+ * setter entrenamiento usuario principiante
+ *
+ * @param
+ * @return string: Tipo de entrenamiento
+ */
+
 void RacerNew::select_train(){
   bool trainbool = true;
   while (trainbool == true){
@@ -50,13 +74,30 @@ class RacerAdv: public RacerSports{
 public:
   std::string sponsr;
 
-//El Constructor de esta clase manda a llamar al Constructor de 'instrum.h'
+  /**
+   * Constructor del usuario donde recibe valores
+   * para llenar las variables de instancia
+   * @param int id: el id del usuario, string name: el nombre del usuario
+   *        int age: edad del usuario, string sox: sexo del Usuario
+   *        float height: altura del usuario, floath weight: peso del usuario
+   *        float hoursRun: tiempo en la pista, Diary Racer diary: diario del Usuario
+   *        Car Sports: Auto que usará en la pista
+   * @return Objeto RacerNew
+   * El Constructor de esta clase manda a llamar al Constructor de 'instrum.h'
+  */
+
   RacerAdv(int id, std::string name, int age, std::string sox, float height, float weight, float hoursRun, DiaryRacer diary, CarSports car): RacerSports(id,name,age,sox,height,weight,hoursRun, diary, car){};
 
   void set_sponsor();
                           };
 
-  //Función exlusiva de un corredor avanzado
+  /**
+   * setter patrocinador usuario avanzado
+   *
+   * @param
+   * @return string: Patrocinador
+   */
+
     void RacerAdv::set_sponsor(){
       bool sponsrbool = true;
       while (sponsrbool == true){
